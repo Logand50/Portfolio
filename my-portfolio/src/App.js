@@ -20,7 +20,7 @@ const Home = () => (
       <h1 class="em">Logan Dye</h1>
       <p>Software and Web Developer</p>
 
-      <p>Java, C#, Python, JavaScript, ReactJS, AngularJS, HTML5, CSS3, SQL</p>
+      <p class="stack">Java, C#, Python, JavaScript, ReactJS, AngularJS, HTML5, CSS3, SQL</p>
       <div id="icons">
         <FontAwesomeIcon className='icon1' icon={faJava} />
         <FontAwesomeIcon className='icon2' icon={faPython} />
@@ -39,10 +39,11 @@ const About = () => (
   <section id="about">
     <h2>About Me</h2>
     <p class="aboutMeParagraph">
-      <span class="em">Welcome!</span> Hello, I’m Logan Dye, currently working as a Business Support Analyst at The Superior Group. I’m focused on providing support for our enterprise applications. 
-      What I enjoy most about my position is the opportunity to actively contribute to many different areas of the business, using my skills to support the company across a wide range of functions and make a meaningful impact.
+      <span class="em">Welcome!</span> Hello, I’m Logan Dye, currently working as a Business Support Analyst at The Superior Group. I’m focused on providing support for our enterprise applications.
+      What I enjoy most about my position is the opportunity to actively contribute to many different areas of the business, using my skills to support the company across a wide range of functions and make a meaningful impact.<br></br><br></br>
 
-      I currently have an Associate degree in Computer Science: Software Development from Columbus State Community College, with plans to pursue a Bachelor’s degree in Computer Science. I have professional experience in software development and testing, as well as BI analytics, implementation, automation, troubleshooting, and communication.
+      I currently have an Associate degree in Computer Science: Software Development from Columbus State Community College, with plans to pursue a Bachelor’s degree in Computer Science.
+      I have professional experience in software development and testing, as well as BI analytics, implementation, automation, troubleshooting, and communication. <br></br><br></br>
 
       Skills: Python, C#, Java, Spring Boot, JavaScript, ReactJS, AngularJS, jQuery, SQL, HTML, CSS, Git, VBA, Tableau, Power BI, Microsoft Fabric, Power Automate, SharePoint, Boomi, Workauto, CMiC ERP Administration, Autodesk Construction Cloud, Excel, Dashboard creation and modifications, Software Integration, ETL, Reporting, Automation, Solutions Development, Workflow Integrations, Jira, ServiceNow
     </p>
@@ -64,18 +65,28 @@ const Employment = () => (
       <span>
         <h4>ERP Data Analyst</h4>
         <h5>November 2024 - Present</h5>
+        <p>At Superior, I design, implement, and support ERP systems and enterprise applications to align technology with organizational goals.
+          I work closely with cross-functional teams, acting as a bridge between business and technical stakeholders, while driving system enhancements,
+          training, and process improvements that maximize value across the organization.</p>
         <ul>
+
           <li>
-            Support ERP systems and infrastructure.
+            Lead ERP projects end-to-end, from requirements gathering through testing, deployment, and post-launch support
           </li>
           <li>
-            Develop interactive dashboards and data visualizations using Power BI and similar tools to support data-driven decision-making.
+            Design and implement ERP solutions and application integrations that improve efficiency and meet business needs
           </li>
           <li>
-            Utilize SQL and Excel for data analysis, including JOINs and complex queries to extract and manipulate data efficiently.
+            Create reports, dashboards, and data analyses to identify trends, support decision-making, and uncover opportunities for process improvement
           </li>
           <li>
-            Manage service requests using a service request platform, ensuring accurate tracking, prioritization, and timely resolution of issues.
+            Develop training materials, user manuals, and hands-on sessions to ensure smooth onboarding and maximize system adoption
+          </li>
+          <li>
+            Collaborate with cross-functional teams and stakeholders to translate business requirements into effective technical solutions
+          </li>
+          <li>
+            Promote continuous learning, process improvements, and system enhancements to keep pace with evolving technologies
           </li>
         </ul>
       </span>
@@ -89,39 +100,45 @@ const Employment = () => (
       <span>
         <h4>Data Analyst</h4>
         <h5>January 2023 - November 2024</h5>
+        <p>As a Data Analyst on the End User Services (E2E) team, I managed incident and request ticket data to improve service for employees,
+          creating reports, automating processes, and analyzing trends to enhance efficiency and user satisfaction.</p>
         <ul>
           <li>
-            Data Analyst within the Technology End User Services End to End (E2E) team, I play a critical role in managing incident/request ticket data for the end user community.
+            Produced reports using Python and SQL, delivering actionable insights on ticket trends and team performance
           </li>
           <li>
-            Generating daily, weekly, monthly, and ad hoc reports for senior management, highlighting key insights and trends using SQL and Excel.
+            Designed a Python workflow with pandas, NumPy, and Selenium (ChromeDriver) to extract, transform, and format aged ticket data from ServiceNow, and automatically distributed HTML reports to managers
           </li>
           <li>
-            Responsible for automation projects for the firm, using Python and other programming languages to streamline reporting and automate routine tasks.
+            Maintained and enhanced the E2E team workbook using Excel and macros for ETL, formatting, and ticket analysis
           </li>
           <li>
-            Maintain the software and analyze aged tickets to track patterns and trends. Leverage advanced Microsoft Excel skills, along with tools such as Service Now, Tableau, and Power BI.
-          </li>
-          <li>
-            Contributed to the development of a program utilizing Python and the pandas data analysis library to analyze and disseminate formatted reports of older tickets to department leads.
-          </li>
-          <li>
-            Develop a program using Python and the pandas data analysis library to analyze and send out formatted reports of older tickets to their department leads. Analyzed aged tickets and use methods to track patterns and trends.
-          </li>
-          <li>
-            Assess ticket quality and aging, identify repeat callers and status callers and analyze ticket hopping metrics to drive continuous enhancement of end user satisfaction. My Analyze tickets to discover trends and ensure a high-quality service experience for our users.
-          </li>
-          <li>
-            I am responsible for providing technical assistance to employees of the firm. I have experience troubleshooting and resolving technical issues related to computer systems, software, and hardware.
-          </li>
-          <li>
-            Analyze of tickets to discover trends and to assist in providing great quality of service to our users.
-          </li>
-          <li>
-            Assisted in the implementation and maintenance of new technology and provided training to employees on how to use it effectively. I work closely with local IT and other departments to ensure the high quality of service of the company's technology infrastructure.
+            Analyzed ticket data to identify trends, provide insights, and collaborate with global teams to improve processes and communication
           </li>
         </ul>
       </span>
+      <div id="resume">
+        <h2 className="resume-title">Full Resume</h2>
+
+
+        <a
+          href="/Logan_Dye_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="resume-link"
+        >
+          View Resume (PDF)
+        </a><br></br>
+
+        <a
+          href="/Logan_Dye_Resume.pdf"
+          download
+          className="resume-link"
+        >
+          Download Resume
+        </a>
+
+      </div>
     </section>
 
   </section>
@@ -238,25 +255,23 @@ const Projects = () => {
       title: 'Projects',
       id: 1,
       name: "C Sharp Calculator",
-      description: "This is a fully functional calculator app built with C# and Windows Forms, featuring a user-friendly interface and supporting basic arithmetic operations such as addition, subtraction, multiplication, and division. Modeled after the IPhone calculator app. Link to the code below.",
+      description: "Desktop calculator built in C# using Windows Forms. Implements event-driven UI logic, input validation, and state management for chained arithmetic operations. UI and interaction model inspired by the iOS calculator. Source code linked below.",
       githubLink: "https://github.com/Logand50/CSharpCalculator",
-
       imageSrc: "/CSharpCalculator.png",
     },
     {
       title: 'Projects',
       id: 2,
-      name: "StudyHub - Computer Science Resource Site",
-      description: "Website containing computer science articles and links to study materials. Made with JQuery, CSS & Bootstrap, and HTML.",
+      name: "StudyHub – Computer Science Resource Site",
+      description: "Static resource hub for computer science topics and study materials. Built with HTML, CSS, Bootstrap, and jQuery. Focused on clean layout, responsive design, and structured content organization for easy navigation.",
       githubLink: "https://studylinkhub.netlify.app/",
-
       imageSrc: "/studyhub.png",
     },
     {
       title: 'Projects',
       id: 3,
       name: "AngularJS Tic-Tac-Toe",
-      description: "Tic Tac Toe programmed using the AngularJS framework and TypeScript. I used component interaction, dynamic styling and animation, DOM manipulation, and event handling.",
+      description: "Single-page Tic-Tac-Toe game built with AngularJS and TypeScript. Uses component-based architecture, two-way data binding, event handling, and dynamic styling with animations to manage game state and user interaction.",
       githubLink: "https://angularpwa-tictactoe.netlify.app/",
       imageSrc: "/TicTacToeAngular.png",
     },
@@ -264,7 +279,7 @@ const Projects = () => {
       title: 'Projects',
       id: 4,
       name: "Car Driving Game",
-      description: "Car driving game programmed in JavaScript. Use [w s a d] keys to drive the car around. Work in progress.",
+      description: "Browser-based driving game developed in vanilla JavaScript. Implements keyboard input handling, basic physics-style movement, and real-time rendering using the HTML canvas. Ongoing project with planned gameplay and performance improvements.",
       githubLink: "https://driftgame.netlify.app/",
       imageSrc: "/drift.png",
     },
@@ -272,26 +287,23 @@ const Projects = () => {
       title: 'Projects',
       id: 5,
       name: "Java Calculator",
-      description: "Basic calculator programmed using Java. This program implemented use of the Swing Library.",
+      description: "Desktop calculator application written in Java using the Swing library. Demonstrates object-oriented design, GUI layout management, and action listeners to handle arithmetic operations and user input.",
       githubLink: "https://github.com/Logand50/java-calculator",
       imageSrc: "/CalculatorJava.png",
-
     },
     {
       title: 'Projects',
-
       id: 6,
-      name: "Tic-Tac-Toe Game",
-      description: "Tic Tac Toe Game programmed in Python, using the Pygame library. The program implements a simple computer algorithm for the single-player mode.",
+      name: "Tic-Tac-Toe Game (Python)",
+      description: "Tic-Tac-Toe game built in Python with Pygame. Features both single-player and two-player modes, including a basic AI opponent implemented with rule-based decision logic and turn-state management.",
       githubLink: "https://github.com/Logand50/TicTacToe",
       imageSrc: "/1687734404199.jpg",
     },
     {
       title: 'Projects',
-
       id: 7,
       name: "Snake Game",
-      description: "Snake Game programmed in Python. This code presents an engaging rendition of the classic Snake game using the Pygame library.",
+      description: "Classic Snake game recreated in Python using Pygame. Implements a real-time game loop, collision detection, score tracking, and incremental difficulty through speed scaling.",
       githubLink: "https://github.com/Logand50/snake_pygame",
       imageSrc: "/Snake_game.pdf.png",
     },
@@ -299,11 +311,12 @@ const Projects = () => {
       title: 'Projects',
       id: 8,
       name: "Fetch JavaScript Game",
-      description: "Game programmed for a JavaScript course. Demonstrating DOM manipulation using the JQuery library.",
+      description: "Interactive browser game developed for a JavaScript course. Demonstrates DOM manipulation, event-driven logic, and dynamic UI updates using jQuery.",
       githubLink: "https://fetchjs.netlify.app/",
       imageSrc: "/fetchGame.png",
     },
   ];
+
 
   const settings = {
     dots: true,
@@ -338,9 +351,9 @@ const Contact = () => (
   <section id="contact">
     <div className="contact-icons">
       <h2>Contact</h2>
-      <p>Email:<a id="contact-git" href="mailto:logandye50@gmail.com">logandye50@gmail.com</a></p>
-      <p>Linkedin: <a target='_blank' id='contact-linkedin' href='https://www.linkedin.com/in/logan-dye-8b2b24256/'>https://www.linkedin.com/in/logan-dye-8b2b24256/</a></p>
-      <p>GitHub: <a target='_blank' id='contact-git' href='https://github.com/Logand50'>https://github.com/Logand50</a></p>
+      <p><span class="contact-header">Email:</span><a id="contact-git" href="mailto:logandye50@gmail.com">logandye50@gmail.com</a></p>
+      <p><span class="contact-header">Linkedin:</span><a target='_blank' id='contact-linkedin' href='https://www.linkedin.com/in/logan-dye-8b2b24256/'>https://www.linkedin.com/in/logan-dye-8b2b24256/</a></p>
+      <p><span class="contact-header">GitHub:</span><a target='_blank' id='contact-git' href='https://github.com/Logand50'>https://github.com/Logand50</a></p>
       <div className="icon-container">
         <a href="https://www.linkedin.com/in/logan-dye-8b2b24256/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} />
@@ -412,8 +425,8 @@ const App = () => {
       </div>
 
       <footer className="bg-dark text-white text-center py-3">
-        <p>Webpage programmed using ReactJS, CSS/HTML & Bootstrap. Hosted using Google Firebase.</p>
-        <p>&copy; 2023-{new Date().getFullYear()}, Logan Dye. All rights reserved.</p>
+        <p>Web app built with React, HTML, CSS, and Bootstrap. Hosted on Firebase.</p>
+        <p><span>&copy; 2023-{new Date().getFullYear()}</span> Logan Dye</p>
       </footer>
     </Router>
   );
