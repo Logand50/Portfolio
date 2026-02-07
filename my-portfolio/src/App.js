@@ -39,9 +39,12 @@ const About = () => (
   <section id="about">
     <h2>About Me</h2>
     <p class="aboutMeParagraph">
-      <span class="em">Welcome!</span> Hello, I'm Logan Dye, a Data Analyst at The Superior Group passionate about process improvement and automation.
-      I am currently pursuing an Associates degree in Computer Science: Software Development from Columbus State Community College. I really enjoy web development and have enterprise experience in software development and data analysis.
+      <span class="em">Welcome!</span> Hello, I’m Logan Dye, currently working as a Business Support Analyst at The Superior Group. I’m focused on providing support for our enterprise applications. 
+      What I enjoy most about my position is the opportunity to actively contribute to many different areas of the business, using my skills to support the company across a wide range of functions and make a meaningful impact.
 
+      I currently have an Associate degree in Computer Science: Software Development from Columbus State Community College, with plans to pursue a Bachelor’s degree in Computer Science. I have professional experience in software development and testing, as well as BI analytics, implementation, automation, troubleshooting, and communication.
+
+      Skills: Python, C#, Java, Spring Boot, JavaScript, ReactJS, AngularJS, jQuery, SQL, HTML, CSS, Git, VBA, Tableau, Power BI, Microsoft Fabric, Power Automate, SharePoint, Boomi, Workauto, CMiC ERP Administration, Autodesk Construction Cloud, Excel, Dashboard creation and modifications, Software Integration, ETL, Reporting, Automation, Solutions Development, Workflow Integrations, Jira, ServiceNow
     </p>
   </section>
 );
