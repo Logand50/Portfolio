@@ -1,8 +1,8 @@
 body {
-  background-color: #468f8a;
-  color: #121212;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #F2F4F7;
+  color: black;
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Crimson+Text:regular,italic,600,600italic,700,700italic);
@@ -16,7 +16,7 @@ body {
   /* font-style: italic; */
 }
 
-
+/* 
 
 #backGround {
   position: fixed;
@@ -24,7 +24,6 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  opacity: 60%;
   background-image: url('../public/bg.png');
 
 
@@ -36,9 +35,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
-}
+} */
 
-.section1,
+/* .section1,
 .section2,
 .section3 {
   background-size: cover;
@@ -47,30 +46,39 @@ body {
 .section2 {
   height: 30%;
   background-image: url('../public/bg.png');
-  opacity: 10%;
 
 }
 
 .section3 {
   height: 20%;
   background-image: url('../public/bg.png');
-  opacity: 10%;
 }
 
 .section1 {
   height: 10%;
   background-image: url('../public/bg.png');
-  opacity: 100%;
 
 }
 
 .section4 {
   height: 100%;
   background-image: url('../public/bg.png');
-  opacity: 25%;
 
+} */
+
+#resume {
+  text-align: center;
 }
 
+.resume-link {
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.resume-title {
+  margin-bottom: 10px;
+}
 
 #icons {
   display: flex;
@@ -83,7 +91,7 @@ body {
 
 .navbar {
   text-align: center;
-  background-color: #04364A;
+  background-color: #99A2AD;
   position: fixed;
   top: 0;
   left: 0;
@@ -100,23 +108,26 @@ body {
 }
 
 
+
 .navbar-brand,
 .navbar-brand:visited,
 .navbar-brand:active {
   text-decoration: none;
-  color: #DAFFFB;
+  color: black;
   font-size: 1.5rem;
+  font-weight: 500;
   transition: color .3s;
 }
 
 .navbar-brand:hover {
-  color: #e3a248;
+  color: #4688D2;
 }
 
 .navbar-nav .nav-link,
 .navbar-nav .nav-link:visited,
 .navbar-nav .nav-link:active {
-  color: #DAFFFB;
+  font-weight: 500;
+  color: black;
   font-size: 1.3rem;
   padding: 0.5rem 2%;
   margin: auto;
@@ -125,31 +136,38 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #e3a248;
+  color: #4688D2;
 }
 
 
 
 
 #home {
-  background-color: #176B87;
-  color: #DAFFFB;
+  background-color: #4688D2;
+  color: black;
   padding: 50px 20px;
   text-align: center;
   margin: auto;
   border-radius: 5px;
-  box-shadow: 0 0 6px 3px #121212;
+  box-shadow: 0 0 6px 3px #1D252D;
   width: 85%;
   position: relative;
   animation: heading 1s;
   animation-timing-function: ease-out;
+  font-weight: 500;
 
 
 }
 
+.stack {
+
+  word-spacing: 5px;
+}
+
+
 
 #about {
-  background-color: #DAFFFB;
+  background-color: #D1D6DD;
   width: 85%;
   margin: 40px auto;
   padding: 20px;
@@ -158,6 +176,7 @@ body {
   position: relative;
   animation: sections 1s;
   animation-timing-function: ease-out;
+  font-weight: 500;
 
 }
 
@@ -172,15 +191,16 @@ body {
 
 #employment {
   border-radius: 5px;
-  box-shadow: 0 0 8px 2px #121212;
+  box-shadow: 0 0 8px 2px #1D252D;
   padding: 20px;
   width: 85%;
-  background-color: #DAFFFB;
+  background-color: #D1D6DD;
   margin: auto;
   position: relative;
   animation: sections 1s;
   animation-timing-function: ease-out;
   margin-bottom: 40px;
+  font-weight: 500;
 
 }
 
@@ -219,7 +239,7 @@ h5 {
 }
 
 #projects .slick-dots:active {
-  color: #ffc107;
+  color: #4688D2;
 }
 
 #msLogo {
@@ -243,10 +263,10 @@ h5 {
 
 #skills {
   border-radius: 5px;
-  box-shadow: 0 0 8px 2px #121212;
+  box-shadow: 0 0 8px 2px #1D252D;
   padding: 20px;
   width: 85%;
-  background-color: #DAFFFB;
+  background-color: #D1D6DD;
   margin: auto;
   position: relative;
   animation: sections 1s;
@@ -267,41 +287,59 @@ h5 {
 }
 
 .skills {
-  background-color: #e3a248;
-  padding: 4px;
+  font-weight: 700;
+  color: #4688D2;
+  background-color: #1D252D;
+  padding: 5px 8px;
   border-radius: 10px;
   margin: 2px;
 }
 
 #contact {
   padding: 80px 20px;
-  background-color: #176B87;
-  color: #DAFFFB;
+  background-color: #4688D2;
+  color: black;
   margin-top: 56px;
   width: 85%;
   border-radius: 5px 5px 0 0;
-  box-shadow: 0 0 6px 3px #121212;
+  box-shadow: 0 0 6px 3px #1D252D;
 
   margin: 50px auto 0 auto;
   position: relative;
   animation: sections 1s;
   animation-timing-function: ease-out;
 
+
 }
 
 #contact p {
-  color: #e3a248;
+  color: black;
+  font-size: large;
+  font-weight: 600;
+}
+
+.contact-header {
+  font-weight: 650;
 }
 
 footer {
+  font-size: 100%;
   text-align: center;
-  background-color: #04364A;
-  color: #DAFFFB;
+  background-color: #99A2AD;
+  color: black;
   padding: 20px 0;
-  box-shadow: 0 0 4px 2px #121212;
+  box-shadow: 0 0 4px 2px #1D252D;
+  font-weight: 500;
 
 
   /* height: 4rem; */
+}
+
+footer span {
+  color: #4688D2;
+  padding: 2px 7px;
+  border-radius: 5px;
+  background-color: #1D252D;
 }
 
 .contact-icons {
@@ -309,18 +347,19 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 
 .contact-icons a {
   display: inline-block;
   margin: 10px;
-  color: #DAFFFB;
+  color: black;
   transition: color 0.3s;
 }
 
 .contact-icons a:hover {
-  color: #e3a248;
+  color: #F2F4F7;
 }
 
 .icon-container a {
@@ -330,21 +369,22 @@ footer {
 
 
 .navbar-nav .nav-link:hover {
-  color: #e3a248;
+  color: #4688D2;
 }
 
 #projects {
   text-align: center;
+  font-weight: 500;
 
 }
 
 .project-card {
   height: 75vh;
 
-  background-color: #DAFFFB;
+  background-color: #D1D6DD;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 0 8px 2px #121212;
+  box-shadow: 0 0 8px 2px #1D252D;
   width: 85%;
   margin: auto;
   position: relative;
@@ -364,7 +404,7 @@ footer {
 
 
 .project-card img {
-  border: 1px solid #121212;
+  border: 1px solid #1D252D;
   border-radius: 5px;
 }
 
@@ -407,7 +447,7 @@ footer {
   transform: translateY(-50%);
   width: 5%;
   height: 10%;
-  color: #121212;
+  color: #1D252D;
   justify-content: end;
   font-size: 2em;
   cursor: pointer;
@@ -425,7 +465,7 @@ footer {
 
 .custom-prev-arrow:hover,
 .custom-next-arrow:hover {
-  color: #e3a248;
+  color: #4688D2;
 }
 
 .icon-container {
@@ -446,11 +486,11 @@ footer {
 .icon7,
 .icon8 {
   padding: 10px;
-  height: .75em;
-  width: .75em;
-  background-color: #e3a248;
+  height: 1em;
+  width: 1em;
+  background-color: #99A2AD;
   border-radius: 50%;
-  color: #176B87;
+  color: #4688D2;
 }
 
 .icon8 {
@@ -575,6 +615,7 @@ footer {
   #employment h2 {
     text-align: right;
     font-size: 1.25rem;
+
   }
 
   .project-card {
