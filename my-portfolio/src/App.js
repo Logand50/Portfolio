@@ -21,7 +21,7 @@ const Home = () => (
 
       <div id="icons">
           <div className="stackItem">
-            <FontAwesomeIcon className="stackIcon" icon={faMicrosoft} />
+            <FontAwesomeIcon className="stackIcon" icon={faLayerGroup} />
             <span>Microsoft Fabric</span>
           </div>
           <div className="stackItem">
@@ -333,88 +333,184 @@ const SampleNextArrow = (props) => {
 
 
 
-const ProjectCard = ({ project, isFirst }) => (
-  <div className={`project-card ${isFirst ? 'first-project' : ''}`}>
+const ProjectCard = ({ project }) => (
+  <div className="project-card featured-work-card">
 
     <div className="project-content">
       <h2>{project.title}</h2>
       <h3>{project.name}</h3>
-      <p>{project.description}</p>
-      <a target='_blank' href={project.githubLink}>{project.githubLink}</a>
+
+      {project.technologies && (
+        <p className="project-technologies">
+          {project.technologies}
+        </p>
+      )}
+
+      <p className="project-description">
+        {project.description}
+      </p>
+
+      {project.highlights && (
+        <ul className="project-highlights">
+          {project.highlights.map((highlight, index) => (
+            <li key={index}>{highlight}</li>
+          ))}
+        </ul>
+      )}
+
+      {project.githubLink && (
+        <a
+          href={project.githubLink}
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Project
+        </a>
+      )}
     </div>
-    <div className="project-image">
-      <img src={project.imageSrc} alt={project.title} />
-    </div>
+
+    {project.imageSrc && (
+      <div className="project-image">
+        <img src={project.imageSrc} alt={project.name} />
+      </div>
+    )}
+
   </div>
 );
 
+const credentials = [
+  {
+    id: 1,
+    issuer: "Microsoft",
+    name: "Microsoft Certified: Fabric Analytics Engineer Associate",
+    exam: "DP-600",
+    imageSrc: "/DP-600_badge.png",
+    credentialLink: "https://learn.microsoft.com/api/credentials/share/en-us/LoganDye-7306/95D21196AEA76639?sharingId=2B69066D975B1EE1"
+  },
+  {
+    id: 2,
+    issuer: "Columbus State Community College",
+    name: "Associate of Applied Science",
+    exam: "Software Development",
+    imageSrc: "/CSCC-logo.jpg",
+    credentialLink: ""
+  }
+];
+const CredentialsCard = () => (
+  <div className="project-card credentials-card">
+
+    <div className="project-content">
+      <h2>Credentials</h2>
+
+      <div className="credentials-grid">
+        {credentials.map((credential) => (
+          <div className="credential-item" key={credential.id}>
+
+            <img
+              className="credential-badge"
+              src={credential.imageSrc}
+              alt={credential.name}
+            />
+
+            <div className="credential-details">
+              <h3>{credential.name}</h3>
+
+              <p className="credential-exam">
+                {credential.exam}
+              </p>
+
+              <p>
+                {credential.issuer}
+              </p>
+
+              {credential.credentialLink && (
+                <a
+                  href={credential.credentialLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View Credential
+                </a>
+              )}
+            </div>
+
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+);
+
+
 const Projects = () => {
-  const projects = [
-    {
-      title: 'Projects',
-      id: 1,
-      name: "C Sharp Calculator",
-      description: "Desktop calculator built in C# using Windows Forms. Implements event-driven UI logic, input validation, and state management for chained arithmetic operations. UI and interaction model inspired by the iOS calculator. Source code linked below.",
-      githubLink: "https://github.com/Logand50/CSharpCalculator",
-      imageSrc: "/CSharpCalculator.png",
-    },
-    {
-      title: 'Projects',
-      id: 2,
-      name: "StudyHub – Computer Science Resource Site",
-      description: "Static resource hub for computer science topics and study materials. Built with HTML, CSS, Bootstrap, and jQuery. Focused on clean layout, responsive design, and structured content organization for easy navigation.",
-      githubLink: "https://studylinkhub.netlify.app/",
-      imageSrc: "/studyhub.png",
-    },
-    {
-      title: 'Projects',
-      id: 3,
-      name: "AngularJS Tic-Tac-Toe",
-      description: "Single-page Tic-Tac-Toe game built with AngularJS and TypeScript. Uses component-based architecture, two-way data binding, event handling, and dynamic styling with animations to manage game state and user interaction.",
-      githubLink: "https://angularpwa-tictactoe.netlify.app/",
-      imageSrc: "/TicTacToeAngular.png",
-    },
-    {
-      title: 'Projects',
-      id: 4,
-      name: "Car Driving Game",
-      description: "Browser-based driving game developed in vanilla JavaScript. Implements keyboard input handling, basic physics-style movement, and real-time rendering using the HTML canvas. Ongoing project with planned gameplay and performance improvements.",
-      githubLink: "https://driftgame.netlify.app/",
-      imageSrc: "/drift.png",
-    },
-    {
-      title: 'Projects',
-      id: 5,
-      name: "Java Calculator",
-      description: "Desktop calculator application written in Java using the Swing library. Demonstrates object-oriented design, GUI layout management, and action listeners to handle arithmetic operations and user input.",
-      githubLink: "https://github.com/Logand50/java-calculator",
-      imageSrc: "/CalculatorJava.png",
-    },
-    {
-      title: 'Projects',
-      id: 6,
-      name: "Tic-Tac-Toe Game (Python)",
-      description: "Tic-Tac-Toe game built in Python with Pygame. Features both single-player and two-player modes, including a basic AI opponent implemented with rule-based decision logic and turn-state management.",
-      githubLink: "https://github.com/Logand50/TicTacToe",
-      imageSrc: "/1687734404199.jpg",
-    },
-    {
-      title: 'Projects',
-      id: 7,
-      name: "Snake Game",
-      description: "Classic Snake game recreated in Python using Pygame. Implements a real-time game loop, collision detection, score tracking, and incremental difficulty through speed scaling.",
-      githubLink: "https://github.com/Logand50/snake_pygame",
-      imageSrc: "/Snake_game.pdf.png",
-    },
-    {
-      title: 'Projects',
-      id: 8,
-      name: "Fetch JavaScript Game",
-      description: "Interactive browser game developed for a JavaScript course. Demonstrates DOM manipulation, event-driven logic, and dynamic UI updates using jQuery.",
-      githubLink: "https://fetchjs.netlify.app/",
-      imageSrc: "/fetchGame.png",
-    },
-  ];
+const projects = [
+  {
+    id: 1,
+    title: "Featured Work",
+    name: "CMiC ERP to Riskcast Timekeeping Enterprise Integration",
+    technologies: "Microsoft Fabric · Python · PySpark · REST APIs · Delta Lake",
+    description:
+      "Develop and maintain production integration workflows that synchronize employee and workforce information between CMiC ERP and Riskcast. The solution processes employee records, project assignments, cost codes, and other workforce data using Microsoft Fabric notebooks, PySpark transformations, and REST API operations. It also includes data validation, response tracking, error handling, and production troubleshooting.",
+    highlights: [
+      "Transforms and validates workforce data from CMiC before synchronization.",
+      "Creates and updates employee, user, project-assignment, and workforce records through REST APIs.",
+      "Tracks API responses and integration errors to support troubleshooting and data-quality monitoring."
+    ]
+  },
+  {
+    id: 2,
+    title: "Featured Work",
+    name: "Payroll and Timekeeping Quality Control",
+    technologies: "Microsoft Fabric · PySpark · SQL · Power BI · Excel · Power Query",
+    description:
+      "Developed reporting and quality-control workflows that compare CMiC ERP and Riskcast timekeeping data before payroll processing. The solution helps identify employee, trade, union, pay-class, timecard, and integration discrepancies so they can be reviewed before affecting downstream payroll processes.",
+    highlights: [
+      "Combines and compares employee and timekeeping data from multiple enterprise systems.",
+      "Identifies data mismatches and exceptions requiring review before payroll processing.",
+      "Provides repeatable reporting that improves visibility into integration and data-quality issues."
+    ]
+  },
+  {
+    id: 3,
+    title: "Featured Work",
+    name: "CMiC ERP to Docebo LMS Enterprise Integration",
+    technologies: "Microsoft Fabric · Python · PySpark · REST APIs · Delta Lake",
+    description:
+      "Develop and maintain integration workflows that synchronize employee information between CMiC ERP and Docebo LMS. The solution extracts, transforms, and validates workforce data before using REST APIs to create and update user records in the learning-management platform.",
+    highlights: [
+      "Prepares CMiC employee data for automated Docebo user provisioning and updates.",
+      "Applies transformation and validation rules before sending records to the Docebo API.",
+      "Captures API responses and errors to support monitoring, troubleshooting, and reliable synchronization."
+    ]
+  },
+  {
+    id: 4,
+    title: "Featured Work",
+    name: "Project Administration Reporting Dashboard",
+    technologies: "Power BI · CMiC ERP · SQL · Power Query · Excel",
+    description:
+      "Developed reporting for project administration teams using labor and operational data from CMiC ERP. The solution gives users greater visibility into recorded hours, pay-period activity, and project-level information while reducing dependence on manually prepared reports.",
+    highlights: [
+      "Transforms ERP data into project-level reporting for business users.",
+      "Supports self-service review of labor and operational information.",
+      "Reduces repetitive report preparation and improves access to current project data."
+    ]
+  },
+  {
+    id: 5,
+    title: "Featured Work",
+    name: "ServiceNow Ticket Analytics Automation",
+    technologies: "Python · pandas · NumPy · Selenium · Excel · HTML",
+    description:
+      "Developed an automated reporting workflow that extracted incident and request data from ServiceNow, transformed and validated the records, and generated formatted reports for management. The process improved consistency and reduced the manual effort required to prepare recurring ticket-aging and operational reports.",
+    highlights: [
+      "Automated browser-based extraction of ServiceNow ticket data using Selenium and ChromeDriver.",
+      "Used pandas and NumPy to clean, transform, validate, and organize reporting data.",
+      "Generated and distributed formatted HTML reports for managers and operational stakeholders."
+    ]
+  }
+];
 
 
   const settings = {
@@ -432,11 +528,14 @@ const Projects = () => {
   return (
     <section id="projects">
       <Slider {...settings}>
+      <div>
+        <CredentialsCard />
+      </div>
 
         {projects.map((project, index) => (
 
           <div key={project.id}>
-
+            
             <ProjectCard project={project} isFirst={index === 0} />
           </div>
         ))}
@@ -502,9 +601,8 @@ const App = () => {
           <Nav className="ml-auto">
             <Nav.Link as="a" href="#about">About</Nav.Link>
             <Nav.Link as="a" href="#employment">Employment</Nav.Link>
-            <Nav.Link as="a" href="#projects">Projects</Nav.Link>
+            <Nav.Link as="a" href="#projects">Featured</Nav.Link>
             <Nav.Link as="a" href="#skills">Skills</Nav.Link>
-
             <Nav.Link as="a" href="#contact">Contact</Nav.Link>
           </Nav>
 
