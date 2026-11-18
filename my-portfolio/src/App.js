@@ -4,9 +4,8 @@ import { Container, Navbar, Nav, Jumbotron, Row, Col } from "react-bootstrap";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngular, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faChevronLeft, faChevronRight, faDatabase } from "@fortawesome/free-solid-svg-icons";
-import { faReact, faJava, faPython, faJs, faHtml5, faCss3Alt } from "@fortawesome/free-brands-svg-icons";
-
+import { faLayerGroup, faCode, faFire, faChevronLeft, faChevronRight, faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { faMicrosoft, faReact, faPython, faJs, faHtml5, faCss3Alt } from "@fortawesome/free-brands-svg-icons";
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -18,18 +17,37 @@ const Home = () => (
   <Jumbotron fluid id="home" className="text-center">
     <Container id='homeContainer'>
       <h1 class="em">Logan Dye</h1>
-      <p>Software and Web Developer</p>
+      <p>Application Engineer I</p>
 
-      <p class="stack">Java, C#, Python, JavaScript, ReactJS, AngularJS, HTML5, CSS3, SQL</p>
       <div id="icons">
-        <FontAwesomeIcon className='icon1' icon={faJava} />
-        <FontAwesomeIcon className='icon2' icon={faPython} />
-        <FontAwesomeIcon className='icon3' icon={faJs} />
-        <FontAwesomeIcon className='icon4' icon={faReact} />
-        <FontAwesomeIcon className='icon5' icon={faAngular} />
-        <FontAwesomeIcon className='icon6' icon={faHtml5} />
-        <FontAwesomeIcon className='icon7' icon={faCss3Alt} />
-        <FontAwesomeIcon className='icon8' icon={faDatabase} />
+          <div className="stackItem">
+            <FontAwesomeIcon className="stackIcon" icon={faMicrosoft} />
+            <span>Microsoft Fabric</span>
+          </div>
+          <div className="stackItem">
+            <FontAwesomeIcon className="stackIcon" icon={faMicrosoft} />
+            <span>Power Platform</span>
+          </div>
+
+          <div className="stackItem">
+            <FontAwesomeIcon className="stackIcon" icon={faPython} />
+            <span>Python</span>
+          </div>
+
+          <div className="stackItem">
+            <FontAwesomeIcon className="stackIcon" icon={faFire} />
+            <span>PySpark</span>
+          </div>
+
+          <div className="stackItem">
+            <FontAwesomeIcon className="stackIcon" icon={faDatabase} />
+            <span>SQL</span>
+          </div>
+
+          <div className="stackItem">
+            <FontAwesomeIcon className="stackIcon" icon={faCode} />
+            <span>REST APIs</span>
+          </div>     
       </div>
     </Container>
   </Jumbotron>
@@ -39,13 +57,14 @@ const About = () => (
   <section id="about">
     <h2>About Me</h2>
     <p class="aboutMeParagraph">
-      <span class="em">Welcome!</span> Hello, I’m Logan Dye, currently working as a Business Support Analyst at The Superior Group. I’m focused on providing support for our enterprise applications.
-      What I enjoy most about my position is the opportunity to actively contribute to many different areas of the business, using my skills to support the company across a wide range of functions and make a meaningful impact.<br></br><br></br>
+      <span class="em">Welcome!</span> I’m Logan Dye, an Application Engineer I at Superior, a Columbus Ohio-based electrical contracting company. 
+      My work focuses on the technology behind the business, from enterprise applications and integrations to automation, data, reporting, and troubleshooting.      
+      I'm a problem solver at heart, and that's what I enjoy most about my role. 
+      Working in the construction industry gives me the opportunity to solve a wide variety of problems and collaborate with people across different areas of the company. 
+      I enjoy digging into how a process or system works, finding opportunities to improve it, and building practical solutions that make a meaningful difference.      <br></br><br></br>
 
-      I currently have an Associate degree in Computer Science: Software Development from Columbus State Community College, with plans to pursue a Bachelor’s degree in Computer Science.
-      I have professional experience in software development and testing, as well as BI analytics, implementation, automation, troubleshooting, and communication. <br></br><br></br>
-
-      Skills: Python, C#, Java, Spring Boot, JavaScript, ReactJS, AngularJS, jQuery, SQL, HTML, CSS, Git, VBA, Tableau, Power BI, Microsoft Fabric, Power Automate, SharePoint, Boomi, Workauto, CMiC ERP Administration, Autodesk Construction Cloud, Excel, Dashboard creation and modifications, Software Integration, ETL, Reporting, Automation, Solutions Development, Workflow Integrations, Jira, ServiceNow
+      I hold an Associate degree in Computer Science: Software Development from Columbus State Community College. 
+      My experience spans software development, enterprise applications, BI analytics, integrations, ETL, automation, reporting, testing, and technical troubleshooting.
     </p>
   </section>
 );
@@ -59,36 +78,71 @@ const Employment = () => (
         <img id="tsgLogo" src="/superiorGroupLogo.png"></img>
       </a>
       <h3 class="company">The Superior Group</h3>
-
-      <h3 class="company details"></h3>
       <h3 class="company details">Columbus, Ohio, United States</h3>
-      <span>
-        <h4>ERP Data Analyst</h4>
-        <h5>November 2024 - Present</h5>
-        <p>At Superior, I design, implement, and support ERP systems and enterprise applications to align technology with organizational goals.
-          I work closely with cross-functional teams, acting as a bridge between business and technical stakeholders, while driving system enhancements,
-          training, and process improvements that maximize value across the organization.</p>
-        <ul>
-
-          <li>
-            Lead ERP projects end-to-end, from requirements gathering through testing, deployment, and post-launch support
-          </li>
-          <li>
-            Design and implement ERP solutions and application integrations that improve efficiency and meet business needs
-          </li>
-          <li>
-            Create reports, dashboards, and data analyses to identify trends, support decision-making, and uncover opportunities for process improvement
-          </li>
-          <li>
-            Develop training materials, user manuals, and hands-on sessions to ensure smooth onboarding and maximize system adoption
-          </li>
-          <li>
-            Collaborate with cross-functional teams and stakeholders to translate business requirements into effective technical solutions
-          </li>
-          <li>
-            Promote continuous learning, process improvements, and system enhancements to keep pace with evolving technologies
-          </li>
-        </ul>
+      <span className="superiorTimeline">
+        <div className="superiorPosition">
+          <h4>Application Engineer I</h4>
+          <h5>March 2026 - Present</h5>
+          <p>
+            As an Application Engineer I at Superior, I develop, integrate, and support enterprise applications and data solutions used across the business. 
+            My work focuses on application integrations, automation, data pipelines, reporting, and troubleshooting, with an emphasis on building reliable solutions that connect systems and improve business processes.
+          </p>
+                    <ul>
+            <li>
+              Develop and maintain enterprise application integrations using Python, REST APIs, Microsoft Fabric, and Spark.        
+            </li>
+            <li>
+              Build and support Microsoft Fabric pipelines, notebooks, and data workflows used to transform, synchronize, and validate data across enterprise applications.     
+            </li>
+            <li>
+             Develop and improve integrations, including employee synchronization, project assignments, cost codes, and other workforce data.    
+            </li>
+            <li>
+              Create reporting and quality-control solutions that help identify payroll, employee, timekeeping, and integration data issues before they affect downstream processes.       
+            </li>
+            <li>
+              Automate manual processes and develop integration solutions across platforms.
+            </li>
+            <li>
+              Troubleshoot application and integration issues by tracing problems across APIs, pipelines, source data, and downstream systems, implementing fixes and validating the resulting data.
+            </li>
+            <li>
+              Collaborate with business teams to understand requirements, improve existing workflows, and develop technical solutions that support both office and field operations.
+            </li>
+          </ul>
+        </div>
+        <div className="superiorPosition">
+          <h4>Business Analyst</h4>
+          <h5>November 2024 - March 2026</h5>
+          <p>During my time as a Business Analyst at Superior, I supported enterprise applications and data initiatives across the business, with a focus on ERP administration, reporting, integrations, automation, and process improvement. 
+            I worked directly with business users to understand operational problems and turn them into practical technical solutions.</p>
+          <ul>
+            <li>
+              Supported and administered CMiC ERP, troubleshooting user, data, reporting, and configuration issues across business functions.          
+            </li>
+            <li>
+              Developed and maintained Power BI dashboards and reports, transforming ERP and operational data into actionable reporting for business stakeholders.          
+            </li>
+            <li>
+              Built data processing and ETL workflows using SQL, Python, Power Query, and Microsoft Fabric to clean, combine, validate, and prepare business data for reporting and downstream processes.          
+            </li>
+            <li>
+              Developed automation solutions using Power Automate, VBA, Python, and other integration tools to reduce manual work and improve existing business processes.          
+            </li>
+            <li>
+              Worked on integrations between enterprise platforms, helping move and synchronize data between CMiC and other business applications.
+            </li>
+            <li>
+              Created and enhanced Excel-based reporting and operational tools, including Power Query transformations, PivotTables, VBA automation, and dynamic reporting.
+            </li>
+            <li>
+              Investigated application and data issues by tracing problems through source systems, queries, integrations, and reports to identify root causes rather than relying solely on reported symptoms.
+            </li>
+            <li>
+              Partnered directly with users and stakeholders to gather requirements, test solutions, document changes, provide training, and support implementations from initial request through production use.
+            </li>
+          </ul>
+        </div>
       </span>
     </section>
     <section id="employmentSection">
@@ -148,7 +202,72 @@ const Skills = () => (
   <section id="skills">
 
     <h2>Skills</h2>
-    {/* <p>Click to view subskills</p> */}
+
+    <h3>Data Engineering & Analytics:</h3>
+    <p>
+      <span class="skills">Microsoft Fabric</span>
+      <span class="skills">PySpark</span>
+      <span class="skills">Spark</span>
+      <span class="skills">SQL</span>
+      <span class="skills">Python</span>
+      <span class="skills">Pandas</span>
+      <span class="skills">ETL</span>
+      <span class="skills">Data Transformation</span>
+      <span class="skills">Data Integration</span>
+      <span class="skills">Data Validation</span>
+      <span class="skills">Data Analysis</span>
+      <span class="skills">Power BI</span>
+      <span class="skills">Power Query</span>
+      <span class="skills">Delta Lake</span>
+      <span class="skills">Lakehouse</span>
+      <span class="skills">Data Pipelines</span>
+      <span class="skills">Data Modeling</span>
+      <span class="skills">Dashboard Development</span>
+      <span class="skills">Reporting</span>
+    </p>
+
+    <h3>Application Integration & Automation:</h3>
+    <p>
+      <span class="skills">REST APIs</span>
+      <span class="skills">API Integration</span>
+      <span class="skills">JSON</span>
+      <span class="skills">Microsoft Power Platform</span>
+      <span class="skills">Power Automate</span>
+      <span class="skills">Power Apps</span>
+      <span class="skills">Workflow Automation</span>
+      <span class="skills">Process Automation</span>
+      <span class="skills">System Integration</span>
+      <span class="skills">VBA</span>
+      <span class="skills">Boomi</span>
+      <span class="skills">Workato</span>
+    </p>
+
+    <h3>Enterprise Applications:</h3>
+    <p>
+      <span class="skills">CMiC ERP</span>
+      <span class="skills">Riskcast</span>
+      <span class="skills">Autodesk Construction Cloud</span>
+      <span class="skills">ServiceNow</span>
+      <span class="skills">Jira</span>
+      <span class="skills">SharePoint</span>
+      <span class="skills">Microsoft Excel</span>
+    </p>
+
+    <h3>Software Development:</h3>
+    <p>
+      <span class="skills">Python</span>
+      <span class="skills">C#</span>
+      <span class="skills">Java</span>
+      <span class="skills">JavaScript</span>
+      <span class="skills">Visual Basic</span>
+      <span class="skills">.NET Framework</span>
+      <span class="skills">Spring Boot</span>
+      <span class="skills">Git</span>
+      <span class="skills">Visual Studio</span>
+      <span class="skills">Testing</span>
+      <span class="skills">Debugging</span>
+    </p>
+
     <h3>Web Development:</h3>
     <p>
       <span class="skills">HTML5</span>
@@ -156,50 +275,30 @@ const Skills = () => (
       <span class="skills">JavaScript</span>
       <span class="skills">ReactJS</span>
       <span class="skills">AngularJS</span>
-      <span class="skills">Node.JS</span>
+      <span class="skills">Node.js</span>
+      <span class="skills">jQuery</span>
       <span class="skills">Bootstrap</span>
       <span class="skills">Tailwind</span>
-      <span class="skills">AWS</span>
       <span class="skills">Firebase</span>
+      <span class="skills">AWS</span>
     </p>
-    <h3>Software Development:</h3>
+
+    <h3>Technical & Professional:</h3>
     <p>
-      <span class="skills">Python</span>
-      <span class="skills">Java</span>
-      <span class="skills">C#</span>
-      <span class="skills">Visual Basic</span>
-      <span class="skills">.NET framework</span>
-    </p>
-    <h3>
-      Technical:
-    </h3>
-    <p>
-      <span class="skills">Data Analysis</span>
-      <span class="skills">Continuous Improvement</span>
-      <span class="skills">Testing</span>
-      <span class="skills">Windows OS</span>
-      <span class="skills">Linux OS</span>
-      <span class="skills">Mac OS</span>
-      <span class="skills">Hardware Devices</span>
-      <span class="skills">MobileIron</span>
-      <span class="skills">InTune</span>
-      <span class="skills">VOIP</span>
-      <span class="skills">Security</span>
       <span class="skills">Troubleshooting</span>
-      <span class="skills">Visual Studio</span>
-
-
-    </p>
-    <h3>
-      Other:
-    </h3>
-    <p>
+      <span class="skills">Root Cause Analysis</span>
       <span class="skills">Process Improvement</span>
+      <span class="skills">Requirements Gathering</span>
+      <span class="skills">Application Support</span>
+      <span class="skills">ERP Administration</span>
+      <span class="skills">System Administration</span>
       <span class="skills">Agile Methodologies</span>
-      <span class="skills">Communication</span>
-      <span class="skills">Determination</span>
-      <span class="skills">Reliability</span>
-
+      <span class="skills">Documentation</span>
+      <span class="skills">User Training</span>
+      <span class="skills">Cross-Functional Collaboration</span>
+      <span class="skills">Windows</span>
+      <span class="skills">Linux</span>
+      <span class="skills">macOS</span>
     </p>
 
   </section>

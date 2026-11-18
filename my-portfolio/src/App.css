@@ -80,14 +80,44 @@ body {
   margin-bottom: 10px;
 }
 
-#icons {
+/* #icons {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 1%;
   font-size: 3rem;
   padding: 1%;
+} */
+
+#icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin: 20px auto;
 }
+
+.stackItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 110px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.stackIcon {
+  padding: 10px;
+  height: 1.2em;
+  width: 1.2em;
+  background-color: #99A2AD;
+  border-radius: 50%;
+  color: #4688D2;
+  font-size: 2rem;
+}
+
 
 .navbar {
   text-align: center;
@@ -551,6 +581,48 @@ footer span {
   animation-delay: .75s;
   animation-timing-function: ease-in-out;
 }
+#employmentSectionTop .superiorTimeline {
+  position: relative;
+  display: block;
+  padding-left: 25px;
+}
+
+#employmentSectionTop .superiorPosition {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* Dots */
+/* Base marker - previous positions */
+#employmentSectionTop .superiorPosition::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: #4688D2;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Highlight current position only */
+#employmentSectionTop .superiorPosition:first-child::before {
+  background-color: #4688D2;
+  box-shadow: 0 0 0 4px rgba(70, 136, 210, 0.20);
+}
+/* Connecting line */
+#employmentSectionTop .superiorPosition:first-child::after {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 7px;
+  height: calc(100% + 30px);
+  width: 2px;
+  background: #4688D2;
+  z-index: 1;
+}
+
 
 /* @supports (animation-timeline: view()){
   @keyframes nav {
