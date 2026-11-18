@@ -393,7 +393,7 @@ const credentials = [
     name: "Associate of Applied Science",
     exam: "Software Development",
     imageSrc: "/CSCC-logo.jpg",
-    credentialLink: ""
+    credentialLink: "https://explore.cscc.edu/programs/CSCI.SOFTDV.AAS/computer-science-software-developer-aas"
   }
 ];
 const CredentialsCard = () => (
