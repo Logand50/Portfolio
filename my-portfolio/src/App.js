@@ -622,7 +622,7 @@ const App = () => {
       </div>
 
       <footer className="bg-dark text-white text-center py-3">
-        <p>Web app built with React, HTML, CSS, and Bootstrap. Hosted on Firebase.</p>
+        <p>Web app built using ReactJS. Hosted on Firebase.</p>
         <p><span>&copy; 2023-{new Date().getFullYear()}</span> Logan Dye</p>
       </footer>
     </Router>
